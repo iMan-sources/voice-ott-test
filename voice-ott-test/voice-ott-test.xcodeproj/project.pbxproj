@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15E3F09E2D6C5A4400A9BC35 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3F09D2D6C5A4400A9BC35 /* NotificationService.swift */; };
+		15E3F0A22D6C5A4400A9BC35 /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 15E3F09B2D6C5A4400A9BC35 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		15E3F0A82D6C5B2E00A9BC35 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3F0A72D6C5B2E00A9BC35 /* Speech.swift */; };
 		D2E537FC2D68BC6E00013FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E537FB2D68BC6E00013FD6 /* AppDelegate.swift */; };
 		D2E537FE2D68BC6E00013FD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E537FD2D68BC6E00013FD6 /* SceneDelegate.swift */; };
 		D2E538002D68BC6E00013FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E537FF2D68BC6E00013FD6 /* ViewController.swift */; };
@@ -16,7 +19,36 @@
 		D2E538102D68BC9400013FD6 /* NotificationSpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E5380F2D68BC9400013FD6 /* NotificationSpeechManager.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		15E3F0A02D6C5A4400A9BC35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2E537F02D68BC6E00013FD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15E3F09A2D6C5A4400A9BC35;
+			remoteInfo = NotificationService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		15E3F0A62D6C5A4400A9BC35 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				15E3F0A22D6C5A4400A9BC35 /* NotificationService.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		15E3F0962D6C589300A9BC35 /* voice-ott-test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "voice-ott-test.entitlements"; sourceTree = "<group>"; };
+		15E3F09B2D6C5A4400A9BC35 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		15E3F09D2D6C5A4400A9BC35 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		15E3F09F2D6C5A4400A9BC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15E3F0A72D6C5B2E00A9BC35 /* Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
 		D2E537F82D68BC6E00013FD6 /* voice-ott-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "voice-ott-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E537FB2D68BC6E00013FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2E537FD2D68BC6E00013FD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +61,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		15E3F0982D6C5A4400A9BC35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2E537F52D68BC6E00013FD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,10 +78,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15E3F09C2D6C5A4400A9BC35 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				15E3F09D2D6C5A4400A9BC35 /* NotificationService.swift */,
+				15E3F09F2D6C5A4400A9BC35 /* Info.plist */,
+				15E3F0A72D6C5B2E00A9BC35 /* Speech.swift */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 		D2E537EF2D68BC6E00013FD6 = {
 			isa = PBXGroup;
 			children = (
 				D2E537FA2D68BC6E00013FD6 /* voice-ott-test */,
+				15E3F09C2D6C5A4400A9BC35 /* NotificationService */,
 				D2E537F92D68BC6E00013FD6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D2E537F82D68BC6E00013FD6 /* voice-ott-test.app */,
+				15E3F09B2D6C5A4400A9BC35 /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +109,7 @@
 		D2E537FA2D68BC6E00013FD6 /* voice-ott-test */ = {
 			isa = PBXGroup;
 			children = (
+				15E3F0962D6C589300A9BC35 /* voice-ott-test.entitlements */,
 				D2E537FB2D68BC6E00013FD6 /* AppDelegate.swift */,
 				D2E537FD2D68BC6E00013FD6 /* SceneDelegate.swift */,
 				D2E537FF2D68BC6E00013FD6 /* ViewController.swift */,
@@ -73,6 +125,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		15E3F09A2D6C5A4400A9BC35 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15E3F0A32D6C5A4400A9BC35 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				15E3F0972D6C5A4400A9BC35 /* Sources */,
+				15E3F0982D6C5A4400A9BC35 /* Frameworks */,
+				15E3F0992D6C5A4400A9BC35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			productName = NotificationService;
+			productReference = 15E3F09B2D6C5A4400A9BC35 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D2E537F72D68BC6E00013FD6 /* voice-ott-test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2E5380C2D68BC7000013FD6 /* Build configuration list for PBXNativeTarget "voice-ott-test" */;
@@ -80,10 +149,12 @@
 				D2E537F42D68BC6E00013FD6 /* Sources */,
 				D2E537F52D68BC6E00013FD6 /* Frameworks */,
 				D2E537F62D68BC6E00013FD6 /* Resources */,
+				15E3F0A62D6C5A4400A9BC35 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				15E3F0A12D6C5A4400A9BC35 /* PBXTargetDependency */,
 			);
 			name = "voice-ott-test";
 			productName = "voice-ott-test";
@@ -100,6 +171,9 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					15E3F09A2D6C5A4400A9BC35 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					D2E537F72D68BC6E00013FD6 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -119,11 +193,19 @@
 			projectRoot = "";
 			targets = (
 				D2E537F72D68BC6E00013FD6 /* voice-ott-test */,
+				15E3F09A2D6C5A4400A9BC35 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		15E3F0992D6C5A4400A9BC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2E537F62D68BC6E00013FD6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,6 +219,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		15E3F0972D6C5A4400A9BC35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E3F09E2D6C5A4400A9BC35 /* NotificationService.swift in Sources */,
+				15E3F0A82D6C5B2E00A9BC35 /* Speech.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2E537F42D68BC6E00013FD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,6 +240,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15E3F0A12D6C5A4400A9BC35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15E3F09A2D6C5A4400A9BC35 /* NotificationService */;
+			targetProxy = 15E3F0A02D6C5A4400A9BC35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D2E538012D68BC6E00013FD6 /* Main.storyboard */ = {
@@ -170,6 +269,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		15E3F0A42D6C5A4400A9BC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U83K4L583M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anhle.voice-ott-test.NotificationService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15E3F0A52D6C5A4400A9BC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U83K4L583M;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anhle.voice-ott-test.NotificationService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D2E5380A2D68BC7000013FD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -292,8 +441,10 @@
 		D2E5380D2D68BC7000013FD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "voice-ott-test/voice-ott-test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U83K4L583M;
@@ -320,8 +471,10 @@
 		D2E5380E2D68BC7000013FD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "voice-ott-test/voice-ott-test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U83K4L583M;
@@ -348,6 +501,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		15E3F0A32D6C5A4400A9BC35 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15E3F0A42D6C5A4400A9BC35 /* Debug */,
+				15E3F0A52D6C5A4400A9BC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2E537F32D68BC6E00013FD6 /* Build configuration list for PBXProject "voice-ott-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
