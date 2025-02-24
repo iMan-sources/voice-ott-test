@@ -26,7 +26,9 @@ final class Speech: NSObject {
         static let preWarmText = " " // Single space for minimal initialization
     }
 
-    private override init() {
+    var onFinish: (() -> Void)?
+
+    override init() {
         synthesizer = AVSpeechSynthesizer()
         audioSession = .sharedInstance()
         voiceCache = NSCache<NSString, AVSpeechSynthesisVoice>()
@@ -79,12 +81,10 @@ final class Speech: NSObject {
             return cachedVoice
         }
 
-        // Try different approaches to get a voice
         let voice = AVSpeechSynthesisVoice(language: language) ??
                    AVSpeechSynthesisVoice.speechVoices().first(where: { $0.language.contains(language) }) ??
                    AVSpeechSynthesisVoice(language: Config.fallbackLanguage)
 
-        // Cache the result if found
         if let voice = voice {
             voiceCache.setObject(voice, forKey: language as NSString)
         }
@@ -95,40 +95,28 @@ final class Speech: NSObject {
     func speak(text: String,
                language: String = Config.defaultLanguage,
                rate: Float = AVSpeechUtteranceDefaultSpeechRate,
-               pitchMultiplier: Float = 1.0,
-               completion: (() -> Void)? = nil) {
+               pitchMultiplier: Float = 1.0) {
 
-        // Ensure initialization is complete
         if !isInitialized {
             initializationQueue.async { [weak self] in
                 self?.initialize()
-                self?.performSpeech(text: text, language: language, rate: rate, pitchMultiplier: pitchMultiplier, completion: completion)
+                self?.performSpeech(text: text, language: language, rate: rate, pitchMultiplier: pitchMultiplier)
             }
             return
         }
 
-        performSpeech(text: text, language: language, rate: rate, pitchMultiplier: pitchMultiplier, completion: completion)
+        performSpeech(text: text, language: language, rate: rate, pitchMultiplier: pitchMultiplier)
     }
 
     private func performSpeech(text: String,
                              language: String,
                              rate: Float,
-                             pitchMultiplier: Float,
-                             completion: (() -> Void)?) {
+                             pitchMultiplier: Float) {
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = getVoice(for: language)
         utterance.rate = rate
         utterance.pitchMultiplier = pitchMultiplier
         utterance.volume = 1.0
-
-        if let completion = completion {
-            NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification,
-                                                 object: nil,
-                                                 queue: .main) { [weak self] _ in
-                self?.stopSpeaking()
-                completion()
-            }
-        }
 
         DispatchQueue.main.async { [weak self] in
             self?.synthesizer.speak(utterance)
@@ -143,8 +131,6 @@ final class Speech: NSObject {
 // MARK: - AVSpeechSynthesizerDelegate
 extension Speech: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        NotificationCenter.default.removeObserver(self,
-            name: UIApplication.didEnterBackgroundNotification,
-            object: nil)
+        onFinish?()
     }
 }
