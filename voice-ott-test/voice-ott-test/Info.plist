@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Privchy - Speech Recognition Usage Description</key>
+	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Speech recognition is needed for converting text to speech&lt;</string>
+	<key>NSMicrophoneUsageDescription</key>
+<string>Need microphone access for uploading audio</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -29,5 +31,6 @@
 		<string>fetch</string>
 		<string>voip</string>
 	</array>
+	
 </dict>
 </plist>

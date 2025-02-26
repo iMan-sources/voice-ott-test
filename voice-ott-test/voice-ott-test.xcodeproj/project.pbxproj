@@ -10,6 +10,13 @@
 		15E3F09E2D6C5A4400A9BC35 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3F09D2D6C5A4400A9BC35 /* NotificationService.swift */; };
 		15E3F0A22D6C5A4400A9BC35 /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 15E3F09B2D6C5A4400A9BC35 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		15E3F0A82D6C5B2E00A9BC35 /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3F0A72D6C5B2E00A9BC35 /* Speech.swift */; };
+		D2B584682D6E18C2003EF589 /* VietnameseNumberConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B584672D6E18C2003EF589 /* VietnameseNumberConverter.swift */; };
+		D2B5846A2D6E1B6B003EF589 /* SpeechToAudioFileConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B584692D6E1B6B003EF589 /* SpeechToAudioFileConverter.swift */; };
+		D2B584782D6E2A44003EF589 /* digit_0.caf in Resources */ = {isa = PBXBuildFile; fileRef = D2B584732D6E2A44003EF589 /* digit_0.caf */; };
+		D2B584792D6E2A44003EF589 /* digit_3.caf in Resources */ = {isa = PBXBuildFile; fileRef = D2B584742D6E2A44003EF589 /* digit_3.caf */; };
+		D2B5847A2D6E2A44003EF589 /* digit_2.caf in Resources */ = {isa = PBXBuildFile; fileRef = D2B584752D6E2A44003EF589 /* digit_2.caf */; };
+		D2B5847B2D6E2A44003EF589 /* digit_4.caf in Resources */ = {isa = PBXBuildFile; fileRef = D2B584762D6E2A44003EF589 /* digit_4.caf */; };
+		D2B5847C2D6E2A44003EF589 /* digit_1.caf in Resources */ = {isa = PBXBuildFile; fileRef = D2B584772D6E2A44003EF589 /* digit_1.caf */; };
 		D2E537FC2D68BC6E00013FD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E537FB2D68BC6E00013FD6 /* AppDelegate.swift */; };
 		D2E537FE2D68BC6E00013FD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E537FD2D68BC6E00013FD6 /* SceneDelegate.swift */; };
 		D2E538002D68BC6E00013FD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E537FF2D68BC6E00013FD6 /* ViewController.swift */; };
@@ -49,6 +56,13 @@
 		15E3F09D2D6C5A4400A9BC35 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		15E3F09F2D6C5A4400A9BC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15E3F0A72D6C5B2E00A9BC35 /* Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		D2B584672D6E18C2003EF589 /* VietnameseNumberConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VietnameseNumberConverter.swift; sourceTree = "<group>"; };
+		D2B584692D6E1B6B003EF589 /* SpeechToAudioFileConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToAudioFileConverter.swift; sourceTree = "<group>"; };
+		D2B584732D6E2A44003EF589 /* digit_0.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = digit_0.caf; sourceTree = "<group>"; };
+		D2B584742D6E2A44003EF589 /* digit_3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = digit_3.caf; sourceTree = "<group>"; };
+		D2B584752D6E2A44003EF589 /* digit_2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = digit_2.caf; sourceTree = "<group>"; };
+		D2B584762D6E2A44003EF589 /* digit_4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = digit_4.caf; sourceTree = "<group>"; };
+		D2B584772D6E2A44003EF589 /* digit_1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = digit_1.caf; sourceTree = "<group>"; };
 		D2E537F82D68BC6E00013FD6 /* voice-ott-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "voice-ott-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E537FB2D68BC6E00013FD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2E537FD2D68BC6E00013FD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +123,11 @@
 		D2E537FA2D68BC6E00013FD6 /* voice-ott-test */ = {
 			isa = PBXGroup;
 			children = (
+				D2B584732D6E2A44003EF589 /* digit_0.caf */,
+				D2B584772D6E2A44003EF589 /* digit_1.caf */,
+				D2B584752D6E2A44003EF589 /* digit_2.caf */,
+				D2B584742D6E2A44003EF589 /* digit_3.caf */,
+				D2B584762D6E2A44003EF589 /* digit_4.caf */,
 				15E3F0962D6C589300A9BC35 /* voice-ott-test.entitlements */,
 				D2E537FB2D68BC6E00013FD6 /* AppDelegate.swift */,
 				D2E537FD2D68BC6E00013FD6 /* SceneDelegate.swift */,
@@ -118,6 +137,8 @@
 				D2E538062D68BC7000013FD6 /* LaunchScreen.storyboard */,
 				D2E538092D68BC7000013FD6 /* Info.plist */,
 				D2E5380F2D68BC9400013FD6 /* NotificationSpeechManager.swift */,
+				D2B584672D6E18C2003EF589 /* VietnameseNumberConverter.swift */,
+				D2B584692D6E1B6B003EF589 /* SpeechToAudioFileConverter.swift */,
 			);
 			path = "voice-ott-test";
 			sourceTree = "<group>";
@@ -212,7 +233,12 @@
 			files = (
 				D2E538082D68BC7000013FD6 /* LaunchScreen.storyboard in Resources */,
 				D2E538052D68BC7000013FD6 /* Assets.xcassets in Resources */,
+				D2B5847B2D6E2A44003EF589 /* digit_4.caf in Resources */,
 				D2E538032D68BC6E00013FD6 /* Main.storyboard in Resources */,
+				D2B5847C2D6E2A44003EF589 /* digit_1.caf in Resources */,
+				D2B584792D6E2A44003EF589 /* digit_3.caf in Resources */,
+				D2B584782D6E2A44003EF589 /* digit_0.caf in Resources */,
+				D2B5847A2D6E2A44003EF589 /* digit_2.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,8 +259,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2E538102D68BC9400013FD6 /* NotificationSpeechManager.swift in Sources */,
+				D2B584682D6E18C2003EF589 /* VietnameseNumberConverter.swift in Sources */,
 				D2E538002D68BC6E00013FD6 /* ViewController.swift in Sources */,
 				D2E537FC2D68BC6E00013FD6 /* AppDelegate.swift in Sources */,
+				D2B5846A2D6E1B6B003EF589 /* SpeechToAudioFileConverter.swift in Sources */,
 				D2E537FE2D68BC6E00013FD6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
